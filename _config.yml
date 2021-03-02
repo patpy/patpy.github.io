@@ -6,15 +6,18 @@
 # --- Required options --- #
 
 # Name of website
-title: My Website
+title: A Portfoli for P.K. Kasi
 
 # Your name to show in the footer
-author: Some Person
+author: Patrick Kasi
 
 # --- List of links in the navigation bar --- #
 
 navbar-links:
   About Me: "aboutme"
+  Applied research scientist, Signal processing Engineer, Algorithm Engineer, Clinical Engineer
+  
+  I am Patrick and I am a multidisciplinary scientist. My interests...
   Resources:
     - Beautiful Jekyll: "https://beautifuljekyll.com"
     - Learn markdown: "https://www.markdowntutorial.com/"
