@@ -14,7 +14,7 @@ author: Patrick Kasi
 # --- List of links in the navigation bar --- #
 
 navbar-links:
-  About Me: "Research Scientist, Algorithm, Signal Processing and Machine Learning Engineer, Medical Device"
+  About Me: ""
   Resources:
     - Beautiful Jekyll: "https://beautifuljekyll.com"
     - Learn markdown: "https://www.markdowntutorial.com/"
