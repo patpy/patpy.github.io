@@ -14,10 +14,7 @@ author: Patrick Kasi
 # --- List of links in the navigation bar --- #
 
 navbar-links:
-  About Me: "aboutme"
-  Applied research scientist, Signal processing Engineer, Algorithm Engineer, Clinical Engineer
-  
-  I am Patrick and I am a multidisciplinary scientist. My interests...
+  About Me: "Research Scientist, Algorithm, Signal Processing and Machine Learning Engineer, Medical Device"
   Resources:
     - Beautiful Jekyll: "https://beautifuljekyll.com"
     - Learn markdown: "https://www.markdowntutorial.com/"
