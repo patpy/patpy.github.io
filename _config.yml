@@ -14,7 +14,7 @@ author: Patrick Kasi
 # --- List of links in the navigation bar --- #
 
 navbar-links:
-  About Me: ""
+  About Me: "https://patpy.github.io/aboutme.md"
   Resources:
     - Beautiful Jekyll: "https://beautifuljekyll.com"
     - Learn markdown: "https://www.markdowntutorial.com/"
