@@ -67,6 +67,9 @@ social-network-links:
 # If you don't want to show an RSS link, remove the following line.
 rss-description: This website is a virtual proof that I'm awesome
 
+#----------kramdown for Latex based math formulas-----------------
+markdown: kramdown
+
 # --- General options --- #
 
 # Select which social network share links to show in posts
