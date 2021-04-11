@@ -70,6 +70,11 @@ rss-description: This website is a virtual proof that I'm awesome
 #----------kramdown for Latex based math formulas-----------------
 markdown: kramdown
 
+#----Now turn on the KaTex engine 
+kramdown:
+  math_engine: katex
+
+
 # --- General options --- #
 
 # Select which social network share links to show in posts
