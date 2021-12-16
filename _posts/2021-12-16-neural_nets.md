@@ -43,7 +43,8 @@ In this post, we will restrict ourselves to feed-forward neural networks. The ne
 are in general a subset of the \textbf{I} nodes that constitute the \emph{i}\(^{th}\) layer. We denote this subset by \textbf{I}\(_k\). So the weighted sum of the inputs is described as,
 $$\begin{equation}
   \varphi_j = \sum_{i\in I_j}x_i,
-$$\end{equation}
+\end{equation}
+$$
 where $$\textbf{I}\(_j\)$$ is the set of nodes from the $$\emph{i}\(^{th}\)$$ layer which feeds node $$\emph{j}$$.
 
 **FIR filters**
