@@ -12,8 +12,18 @@ comments: true
 **Background**
 In this post we will provide a mathematical background and context of the backpropagation algorithm as well as discuss and implement, from ground up, a c++ library that can be used to create modular neuralnetworks.
 
-![perceptron](/_images/perceptron.png)
+[image]:/_images/perceptron.png
+![The perceptron][image]
+A reference to thr [image](#image0
 
+\begin{figure}[htbp]
+\centering
+\includegraphics[keepaspectratio, width=\textwidth,  height=0.75\textheight]{/_images/perceptron.png}
+\caption{Test}
+\label{perceptron}
+\end{figure}
+
+A reference to the image (\autoref{perceptron}).
 
 McCulloch and Pitts introduced the idea of biologically inspired computing machines(neural networks), and later Rosenblatt proposed the percetron as the first model of learning with examples (supervised learning)\textemdash \emph{McCulloch-Pitts} model of a neuron. 
 The neural model consists of a linear combiner and a hard limiter as shown in \cref{fig:perceptron}.
