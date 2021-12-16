@@ -1,8 +1,7 @@
-
 ---
 layout: post
-title: Neural Network: Mathematical Description and Implementation in C++ 
-subtitle: And a practical implementation of a Buttworth low pass filter
+title: Neural Network
+subtitle: Mathematical Description and Implementation in C++ 
 gh-repo: 
 gh-badge: 
 tags: 
