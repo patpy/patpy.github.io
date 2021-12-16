@@ -9,14 +9,80 @@ katex: True
 comments: true
 ---
 
-A digital filter is a mathematical algorithm designed to operate on digital datsets, such as bio-signals recorded from sensors attached to a human body, to remove unwanted information or noise. Practical applications of digital filtering include removal of powerline noise and other unwanted components of a signal. In this way, it is simpler to analyze information of interest in the signal. It is important to pay attention to the type of filter and objectives when processing data. 
+\section{Background}
+In this post we will provide a mathematical background and context of the backpropagation algorithm as well as discuss and implement, from ground up, a c++ library that can be used to create modular neuralnetworks.
 
-A class of digital filters classified as Linear time invariant systems (LTI) is commonly used in signal processing applications. In this article we will simply refer to them as digital filters. There are two main classes of digital filters:
+McCulloch and Pitts introduced the idea of biologically inspired computing machines(neural networks), and later Rosenblatt proposed the percetron as the first model of learning with examples (supervised learning)\textemdash \emph{McCulloch-Pitts} model of a neuron. 
+The neural model consists of a linear combiner and a hard limiter as shown in \cref{fig:perceptron}.
 
-* Finite impulse response (FIR)
-* Infinite impulse response (IIR)
+\begin{figure}[h]
+\centering
+\begin{tikzpicture}[
+init/.style={
+  draw,
+  circle,
+  inner sep=2pt,
+  font=\Huge,
+  join = by -latex
+},
+squa/.style={
+  draw,
+  inner sep=2pt,
+  font=\Large,
+  join = by -latex
+},
+start chain=2,node distance=13mm
+]
+\node[on chain=2] 
+  (x2) {$x_2$};
+\node[on chain=2,join=by o-latex] 
+  {$w_2$};
+\node[on chain=2,init] (sigma) 
+  {$\displaystyle\Sigma$};
+\node[on chain=2,squa,label=above:{\parbox{2cm}{\centering Activation \\ function}}]   
+  {$f$};
+\node[on chain=2,label=above:Output,join=by -latex] 
+  {$y$};
+\begin{scope}[start chain=1]
+\node[on chain=1] at (0,1.5cm) 
+  (x1) {$x_1$};
+\node[on chain=1,join=by o-latex] 
+  (w1) {$w_1$};
+\end{scope}
 
-Their names derive from how the filters respond to a single pulse of inputThese filters are characterized by the length of their impulse responses, referred to as their impulse responses. 
+\begin{scope}[start chain=3]
+  \node[on chain=3] at (0, -1.5cm)
+  (x3) {$ \vdots \quad$};
+  \node[on chain=3,join=by o-latex] 
+  (w3) {$ \vdots \quad $};
+\end{scope}
+
+\begin{scope}[start chain=4]
+\node[on chain=4] at (0,-2.5cm) 
+  (x4) {$x_m$};
+\node[on chain=4,label=below:Weights,join=by o-latex] 
+  (w4) {$w_m$};
+\end{scope}
+\node[label=above:\parbox{2cm}{\centering Bias \\ $b$}] at (sigma|-w1) (b) {};
+
+\draw[-latex] (w1) -- (sigma);
+\draw[-latex] (w3) -- (sigma);
+\draw[-latex] (w4) -- (sigma);
+\draw[o-latex] (b) -- (sigma);
+
+\draw[decorate,decoration={brace,mirror}] (x1.north west) -- node[left=10pt] {Inputs} (x4.south west);
+\end{tikzpicture}
+\caption{\textbf{The Perceptron.} A single neural processing. The inputs are multiplied with corresponding weights and linearly combined. The result is then fed to the activation function to produce the output.}
+\label{fig:perceptron}
+\end{figure}
+A single layer neural network as described above is limited to classification of linearly separable patterns . In practice, beacuse a one layer neural network is a limitation, we consider neural networks with than one layer\textemdash multilayer perceptrons.
+Multilayer perceptrons are characterized by:
+\begin{itemize}
+\item Differentiable nonlinear activation function for each neuron
+\item one or more hidden layers (they are hidden from both input and output layers)
+\item High a degree of connectivity
+  
+\end{itemize}
 
 
 **FIR filters**
