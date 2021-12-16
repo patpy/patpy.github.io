@@ -23,6 +23,8 @@ A reference to the [image](#image)
 \label{perceptron}
 \end{figure}
 
+\\( a^2 = b^2 \\)
+
 A reference to the image (\autoref{perceptron}).
 
 McCulloch and Pitts introduced the idea of biologically inspired computing machines(neural networks), and later Rosenblatt proposed the percetron as the first model of learning with examples (supervised learning)\textemdash \emph{McCulloch-Pitts} model of a neuron. 
