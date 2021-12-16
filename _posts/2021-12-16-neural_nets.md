@@ -40,7 +40,7 @@ Multilayer perceptrons are characterized by:
 \end{itemize}
 
 In this post, we will restrict ourselves to feed-forward neural networks. The neural network arhitecture is “feed-forward” because nodes within a particular layer are connected only to nodes in the immediately “down-stream” layer. In this way, nodes in the input layer only activate nodes in the subsequent hidden layer. The subsequent hidden layer, in turn, will only activate nodes in the next hidden layer. This remains true until the nodes of the most down-stream hidden layer. The most down-stream hidden layer then feeds the output layer; see illustration in \cref{fig:multilayer-perceptron}. While every node is connected to every node in \cref{fig:multilayer-perceptron}, layers are not generally fully connected. Nodes from some layer, say \emph{i} that innervate the \emph{j}\(^{th}\) node in the subsequent layer \emph{j}
-are in general a subset of the \textbf{I} nodes that constitute the \emph{i}\(^{th}\) layer. We denote this subset by \textbf{I}\(_k\). So the weighted sum of the inputs is described as,
+are in general a subset of the \(\textbf{I}\) nodes that constitute the \(\emph{i}\(^{th}\) layer. We denote this subset by \textbf{I}\(_k\). So the weighted sum of the inputs is described as,
 $$\begin{equation}
   \varphi_j = \sum_{i\in I_j}x_i,
 \end{equation}
