@@ -14,7 +14,7 @@ In this post we will provide a mathematical background and context of the backpr
 
 McCulloch and Pitts introduced the idea of biologically inspired computing machines(neural networks), and later Rosenblatt proposed the percetron as the first model of learning with examples (supervised learning)\textemdash \emph{McCulloch-Pitts} model of a neuron. 
 The neural model consists of a linear combiner and a hard limiter as shown in \cref{fig:perceptron}.
-
+$$
 \begin{figure}[h]
 \centering
 \begin{tikzpicture}[
@@ -75,6 +75,7 @@ start chain=2,node distance=13mm
 \caption{\textbf{The Perceptron.} A single neural processing. The inputs are multiplied with corresponding weights and linearly combined. The result is then fed to the activation function to produce the output.}
 \label{fig:perceptron}
 \end{figure}
+$$
 A single layer neural network as described above is limited to classification of linearly separable patterns . In practice, beacuse a one layer neural network is a limitation, we consider neural networks with than one layer\textemdash multilayer perceptrons.
 Multilayer perceptrons are characterized by:
 \begin{itemize}
