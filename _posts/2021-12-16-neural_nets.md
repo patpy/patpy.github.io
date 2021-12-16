@@ -1,7 +1,7 @@
 
 ---
 layout: post
-title: Digital Filters -- Under construction! 
+title: Neural Network: Mathematical Description and Implementation in C++ 
 subtitle: And a practical implementation of a Buttworth low pass filter
 gh-repo: 
 gh-badge: 
