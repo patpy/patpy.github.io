@@ -17,6 +17,8 @@ In this post we will provide a mathematical background and context of the backpr
 
 A reference to the [image](#image)
 
+![Crepe](/_images/perceptron.png){: .mx-auto.d-block :}
+
 \begin{figure}[htbp]
 \centering
 \includegraphics[keepaspectratio, width=\textwidth,  height=0.75\textheight]{/_images/perceptron.png}
