@@ -14,6 +14,7 @@ In this post we will provide a mathematical background and context of the backpr
 
 [image]:/_images/perceptron.png
 ![The perceptron][image]
+*The perceptron is the most wonderful thing ever discovered*
 A reference to the [image](#image)
 
 \begin{figure}[htbp]
