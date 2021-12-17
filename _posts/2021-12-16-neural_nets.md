@@ -48,7 +48,7 @@ $$\begin{equation}
 \end{equation}
 $$
 
-where \\ \textbf{I}\(_j\) \\ is the set of nodes from the $$\emph{i}\(^{th}\)$$ layer which feeds node $$\emph{j}$$.
+where \\ \textbf{I}_ \\ is the set of nodes from the $$\emph{i}^{th}$$ layer which feeds node $$\emph{j}$$.
 
 **FIR filters**
 In FIR filter configuration, the output is not fed-back to the input and so if there is no subsequent input there will be no output. The output of an FIR filter is given by
