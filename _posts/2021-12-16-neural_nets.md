@@ -19,6 +19,8 @@ A reference to the [image](#image)
 
 ![Crepe](/assets/img/perceptron.png){: .mx-auto.d-block :}
 
+![example 1{caption=The perceptron. A single neural processing unit. The inputs are multiplied =with corresponding weights and linearly combined. The result is then fed to the activation functin to produce the output.}](/assets/img/perceptron.png){: .mx-auto.d-block :}
+
 \begin{figure}[htbp]
 \centering
 \includegraphics[keepaspectratio, width=\textwidth,  height=0.75\textheight]{/_images/perceptron.png}
