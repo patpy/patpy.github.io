@@ -35,10 +35,9 @@ The neural model consists of a linear combiner and a hard limiter as shown in \c
 
 A single layer neural network as described above is limited to classification of linearly separable patterns . In practice, beacuse a one layer neural network is a limitation, we consider neural networks with than one layer\textemdash multilayer perceptrons.
 Multilayer perceptrons are characterized by:
-* 
-  +Differentiable nonlinear activation function for each neuron
-  +one or more hidden layers (they are hidden from both input and output layers)
-  +High a degree of connectivity
+* Differentiable nonlinear activation function for each neuron
+* one or more hidden layers (they are hidden from both input and output layers)
+* High a degree of connectivity
   
 
 
