@@ -9,7 +9,7 @@ katex: True
 comments: true
 ---
 
-Architecture is an interst to me, and I do 3D modeling and texturing as hobby, using a freely available software called Blender. 
+Architecture is an interest to me, and I do 3D modeling and texturing as hobby, using a freely available software called [Blender]. 
 
 
 **Buildings**
