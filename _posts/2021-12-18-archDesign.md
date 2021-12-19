@@ -14,14 +14,14 @@ Architecture is an interest to me, and I do 3D modeling and texturing as hobby, 
 
 **Buildings**
 
-![home1](/_images/new_look_front5.png){: .mx-auto.d-block :}
+![home1](/assets/img/new_look_front5.png){: .mx-auto.d-block :}
 
 
-![guest](/_images/Entrance_hotel1.png){: .mx-auto.d-block :}
+![guest](/assets/img/Entrance_hotel1.png){: .mx-auto.d-block :}
 
 **Landscaping**
-![drive_in](/_images/drive_way1.png){: .mx-auto.d-block :}
-![drive_out](/_images/drive_way_out.png){: .mx-auto.d-block :}
+![drive_in](/assets/img/drive_way1.png){: .mx-auto.d-block :}
+![drive_out](/assets/img/drive_way_out.png){: .mx-auto.d-block :}
 
 ## Boxes
 You can add notification, warning and error boxes like this:
