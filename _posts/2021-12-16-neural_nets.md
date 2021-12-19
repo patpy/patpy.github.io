@@ -35,12 +35,12 @@ The neural model consists of a linear combiner and a hard limiter as shown in \c
 
 A single layer neural network as described above is limited to classification of linearly separable patterns . In practice, beacuse a one layer neural network is a limitation, we consider neural networks with than one layer\textemdash multilayer perceptrons.
 Multilayer perceptrons are characterized by:
-\begin{itemize}
-\item Differentiable nonlinear activation function for each neuron
-\item one or more hidden layers (they are hidden from both input and output layers)
-\item High a degree of connectivity
+* 
+  Differentiable nonlinear activation function for each neuron
+  one or more hidden layers (they are hidden from both input and output layers)
+  High a degree of connectivity
   
-\end{itemize}
+
 
 In this post, we will restrict ourselves to feed-forward neural networks. The neural network arhitecture is “feed-forward” because nodes within a particular layer are connected only to nodes in the immediately “down-stream” layer. In this way, nodes in the input layer only activate nodes in the subsequent hidden layer. The subsequent hidden layer, in turn, will only activate nodes in the next hidden layer. This remains true until the nodes of the most down-stream hidden layer. The most down-stream hidden layer then feeds the output layer; see illustration in \cref{fig:multilayer-perceptron}. While every node is connected to every node in \cref{fig:multilayer-perceptron}, layers are not generally fully connected. Nodes from some layer, say *i* that innervate the *$$j^{th}$$* node in the subsequent layer *j* are in general a subset of the $$\textbf{I}$$ nodes that constitute the *$$i^{th}$$* layer. We denote this subset by $$\textbf{I}_k$$. So the weighted sum of the inputs is described as:
 
