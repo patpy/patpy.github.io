@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 3d Modeling and Rendering 
+title: 3D Modeling and Rendering 
 subtitle: Buildings and Landscaping
 gh-repo: 
 gh-badge: 
