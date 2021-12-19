@@ -12,12 +12,12 @@ comments: true
 **Background**
 In this post we will provide a mathematical background and context of the backpropagation algorithm as well as discuss and implement, from ground up, a c++ library that can be used to create modular neuralnetworks.
 
-[image]:/_images/perceptron.png
+[image]://assets/img/perceptron.png
 *The perceptron is the most wonderful thing ever discovered*
 
 A reference to the [image](#image)
 
-![Crepe](/_images/perceptron.png){: .mx-auto.d-block :}
+![Crepe](//assets/img/perceptron.png){: .mx-auto.d-block :}
 
 \begin{figure}[htbp]
 \centering
