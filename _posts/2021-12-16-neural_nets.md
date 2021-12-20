@@ -91,7 +91,7 @@ Figure 3 illustrates a neuron, j, being fed by a set of input neurons in the
 previous layer (i th ). The induced local field φ j associated with neuron j is
 described as,
 
-$\begin{equation}
+$$\begin{equation}
   \varphi_j = \sum_{i=0}^m w_{ji}y_ix_i,
 \end{equation}
 $$
@@ -99,7 +99,7 @@ $$
 where m is the number of neuronal inputs applied to neuron j. So y j , the
 output of neuron j at some iteration n, is defined as;
 
-$\begin{equation}
+$$\begin{equation}
   y_j = f(\varphi_j),
 \end{equation}
 $$
