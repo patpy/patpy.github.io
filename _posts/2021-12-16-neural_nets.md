@@ -72,3 +72,16 @@ have learned the function of interest and the procedure terminates. For this
 reason, back–propagation is also known as a steepest descent algorithm.
 
 ## **Derivation**
+
+To describe the algorithm, let D = {x, d} be the set of example data. As
+shown in Equation (3), y j is the output of neuron j in the output layer due
+to input or simulus x. The error between desired value and neuron output
+is exppressed as;
+
+$$\begin{equation}
+  e_j = d_j - y_j.
+\end{equation}
+$$
+
+
+
