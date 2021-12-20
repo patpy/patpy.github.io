@@ -19,16 +19,7 @@ In this post we will provide a mathematical background and context of the backpr
 
 ![example 1{caption=The perceptron. A single neural processing unit. The inputs are multiplied =with corresponding weights and linearly combined. The result is then fed to the activation functin to produce the output.}](/assets/img/perceptron.png){: .mx-auto.d-block :}
 
-\begin{figure}[htbp]
-\centering
-\includegraphics[keepaspectratio, width=\textwidth,  height=0.75\textheight]{/_images/perceptron.png}
-\caption{Test}
-\label{perceptron}
-\end{figure}
-
-\\( a^2 = b^2 \\)
-
-A reference to the image (\autoref{perceptron}).
+A reference to the image (\autoref{Crepe}).
 
 McCulloch and Pitts introduced the idea of biologically inspired computing machines(neural networks), and later Rosenblatt proposed the percetron as the first model of learning with examples (supervised learning)\textemdash \emph{McCulloch-Pitts} model of a neuron. 
 The neural model consists of a linear combiner and a hard limiter as shown in \cref{fig:perceptron}.
