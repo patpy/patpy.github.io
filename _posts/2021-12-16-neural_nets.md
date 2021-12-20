@@ -112,4 +112,34 @@ negative errors do not canel each other out. We modify Equation (2) by
 square the differences before summing them. In addition, we scale the sum
 of errors by 1/2 for convenience:
 
+$$
+\begin{equation}\label{eq:err}
+  E \coloneqq \frac{1}{2} \sum_{i=1}^m(d_j - y_i)^2 = \frac{1}{2}\sum_{i=1}^me_j^2.
+\end{equation}
+$$
+Note that \Cref{eq:err} assumes that the \emph{j}\(^{th}\) layer is the output  layer.
 
+The change in a weight connecting a node in the previous layer to a node
+in layer j is defined by,
+
+$$
+\begin{equation}\label{eq:weight_change}
+  \Delta w_{ji} = -\alpha \frac{\partial E}{\partial w_{ji}}.
+\end{equation}
+$$
+
+Note that $$\(\alpha\)$$ is a free parameter (learning rate) that we set at the beginning of training. With $$\(\alpha\)$$, we can set the step size that is appropriate for the problem at hand. The adjustment of $$\alpha\textemdash$$ between values of $$\(0\)$$ and \(1\)\textemdash is usually ad-hoc. The negative sign in the formular suggestes that the weights change in the direction of decreasing error. By the chain rule, we expand the partial derivative as follows:
+
+$$
+\begin{equation}\label{eq:chain_rule}
+  \frac{\partial E}{\partial w_{ji}} = \frac{\partial E}{\partial e_j} \frac{\partial e_j}{\partial y_j} \frac{\partial y_j}{\partial \varphi_j} \frac{\partial \varphi_j}{\partial w_{ji}},
+\end{equation}
+$$
+
+where $$\(\varphi_j\)$$ is the weigted sum of inputs into the $$\emph{j}\(^{th}\)$$ node. The partial derivative $$\(\partial E / \partial w_{ji}\)$$ represents a sensitivity factor for determining the direction of the serach in the weight space for synaptic weight $$\emph{w}\(_{ji}\)$$.
+
+$$
+\begin{equation}\label{eq:partial_local_field}
+  \frac{\partial \varphi_j}{\partial w_{ji}} = y_i
+\end{equation}
+$$
