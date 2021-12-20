@@ -38,7 +38,7 @@ In this post, we will restrict ourselves to feed-forward neural networks, as sho
 | <b> Figure 2: Neural network activation flows from one layer to another. A demonstration of a multilayer perceptron with D inputs and C output "neurons". .</b> |
 
 
-The neural network arhitecture is “feed-forward” because nodes within a particular layer are connected only to nodes in the immediately “down-stream” layer. In this way, nodes in the input layer only activate nodes in the subsequent hidden layer. The subsequent hidden layer, in turn, will only activate nodes in the next hidden layer. This remains true until the nodes of the most down-stream hidden layer. The most down-stream hidden layer then feeds the output layer; see illustration in \cref{fig:multilayer-perceptron}. While every node is connected to every node in \cref{fig:multilayer-perceptron}, layers are not generally fully connected. Nodes from some layer, say *i* that innervate the *$$j^{th}$$* node in the subsequent layer *j* are in general a subset of the $$\textbf{I}$$ nodes that constitute the *$$i^{th}$$* layer. We denote this subset by $$\textbf{I}_k$$. So the weighted sum of the inputs is described as:
+The neural network arhitecture is “feed-forward” because nodes within a particular layer are connected only to nodes in the immediately “down-stream” layer. In this way, nodes in the input layer only activate nodes in the subsequent hidden layer. The subsequent hidden layer, in turn, will only activate nodes in the next hidden layer. This remains true until the nodes of the most down-stream hidden layer. The most down-stream hidden layer then feeds the output layer; see illustration in \cref{fig:multilayer-perceptron}. While every node is connected to every node in \cref{fig:multilayer-perceptron}, layers are not generally fully connected. Nodes from some layer, say *i* that innervate the *$j^{th}$* node in the subsequent layer *j* are in general a subset of the $\textbf{I}$ nodes that constitute the *$i^{th}$* layer. We denote this subset by $\textbf{I}_k$. So the weighted sum of the inputs is described as:
 
 $$\begin{equation}
   \varphi_j = \sum_{i\in I_j}x_i,
@@ -80,6 +80,7 @@ is exppressed as;
 
 $$\begin{equation}
   e_j = d_j - y_j.
+  (\#eq:err)
 \end{equation}
 $$
 
@@ -108,7 +109,7 @@ where f (·) is the activation function.
 
 We need to define a meaure of error for our back–propagation algorithm;
 we consider the error energy each output node. It ensures that positive and
-negative errors do not canel each other out. We modify Equation (2) by
+negative errors do not canel each other out. We modify Equation \@ref{eq:err) by
 square the differences before summing them. In addition, we scale the sum
 of errors by 1/2 for convenience:
 
