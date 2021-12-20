@@ -87,3 +87,29 @@ $$
 |:--:|
 | <b> Figure 3: Training the perceptron. Demonstration of backpropagation training with a single neural processing unit given a training dataset.</b> |
 
+Figure 3 illustrates a neuron, j, being fed by a set of input neurons in the
+previous layer (i th ). The induced local field φ j associated with neuron j is
+described as,
+
+$\begin{equation}
+  \varphi_j = \sum_{i=0}^m w_{ji}y_ix_i,
+\end{equation}
+$$
+
+where m is the number of neuronal inputs applied to neuron j. So y j , the
+output of neuron j at some iteration n, is defined as;
+
+$\begin{equation}
+  y_j = f(\varphi_j),
+\end{equation}
+$$
+
+where f (·) is the activation function.
+
+We need to define a meaure of error for our back–propagation algorithm;
+we consider the error energy each output node. It ensures that positive and
+negative errors do not canel each other out. We modify Equation (2) by
+square the differences before summing them. In addition, we scale the sum
+of errors by 1/2 for convenience:
+
+
