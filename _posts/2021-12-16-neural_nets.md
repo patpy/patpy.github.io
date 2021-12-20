@@ -96,7 +96,7 @@ $$\begin{equation}
 \end{equation}
 $$
 
-where *m* is the number of neuronal inputs applied to neuron j. So *$y_j$* , the
+where *m* is the number of neuronal inputs applied to neuron *j*. So *$y_j$* , the
 output of neuron *j* at some iteration n, is defined as;
 
 $$\begin{equation}
@@ -121,7 +121,7 @@ $$
 Note that \Cref{eq:err} assumes that the $$\emph{j}\(^{th}\)$$ layer is the output  layer.
 
 The change in a weight connecting a node in the previous layer to a node
-in layer j is defined by,
+in layer *j* is defined by,
 
 $$
 \begin{equation}\label{eq:weight_change}
@@ -129,7 +129,7 @@ $$
 \end{equation}
 $$
 
-Note that $$\(\alpha\)$$ is a free parameter (learning rate) that we set at the beginning of training. With $$\(\alpha\)$$, we can set the step size that is appropriate for the problem at hand. The adjustment of $$\alpha\textemdash$$ between values of $$\(0\)$$ and \(1\)\textemdash is usually ad-hoc. The negative sign in the formular suggestes that the weights change in the direction of decreasing error. By the chain rule, we expand the partial derivative as follows:
+Note that $\alpha$ is a free parameter (learning rate) that we set at the beginning of training. With $\alpha$, we can set the step size that is appropriate for the problem at hand. The adjustment of $\alpha$ between values of 0 and 1--is usually ad-hoc. The negative sign in the formular suggestes that the weights change in the direction of decreasing error. By the chain rule, we expand the partial derivative as follows:
 
 $$
 \begin{equation}\label{eq:chain_rule}
@@ -137,7 +137,7 @@ $$
 \end{equation}
 $$
 
-where $$\(\varphi_j\)$$ is the weigted sum of inputs into the $$\emph{j}\(^{th}\)$$ node. The partial derivative $$\(\partial E / \partial w_{ji}\)$$ represents a sensitivity factor for determining the direction of the serach in the weight space for synaptic weight $$\emph{w}\(_{ji}\)$$.
+where $\varphi_j$ is the weigted sum of inputs into the *$j\(^{th}\)$* node. The partial derivative $\partial E / \partial w_{ji}$ represents a sensitivity factor for determining the direction of the serach in the weight space for synaptic weight *$w_{ji}$.
 
 $$
 \begin{equation}\label{eq:partial_local_field}
@@ -145,7 +145,7 @@ $$
 \end{equation}
 $$
 
-Differentiating both sides of Equation (5) with respect to e j we get
+Differentiating both sides of Equation (5) with respect to *$e_j$* we get
 
 $$
 \begin{equation}\label{eq:err_diff}
@@ -153,7 +153,7 @@ $$
 \end{equation}
 $$
 
-Differentiating \Cref{eq:err_output} with respect to \emph{y}\(_j\), we get
+Differentiating \Cref{eq:err_output} with respect to *$y_j$*, we get
 
 $$
 \begin{equation}\label{eq:err_output_diff}
@@ -161,7 +161,7 @@ $$
 \end{equation}
 $$
 
-Differentiating \Cref{eq:neuron_out} with respect to \(\varphi_j\) yields
+Differentiating \Cref{eq:neuron_out} with respect to *$\varphi_j$* yields
 
 $$
 \begin{equation}\label{eq:neuron_out_diff}
@@ -169,7 +169,7 @@ $$
 \end{equation}
 $$
 
-Differentiating the induced local field, \Cref{eq:local_field}, with respect to \emph{w}\(_{ji}\) gives,
+Differentiating the induced local field, \Cref{eq:local_field}, with respect to *$w_{ji}$* gives,
 
 $$
 \begin{equation}\label{eq:local_field_diff}
@@ -185,7 +185,7 @@ $$
 \end{equation}
 $$
 
-Note that the correction applied to $\emph{w}\(_{ji}\)$, see \Cref{eq:weight_change} attempts to minimize the error $$\emph{E}$$ via gradient descent in the weight space.
+Note that the correction applied to *$w_{ji}$*, see \Cref{eq:weight_change} attempts to minimize the error *E* via gradient descent in the weight space.
 Using \Cref{eq:partial_err_weight2} in \Cref{eq:weight_change} gives the following;
 
 $$
@@ -194,7 +194,7 @@ $$
 \end{equation}
 $$
 
-where the local gradient $$\(\delta_j\)$$ is given by
+where the local gradient *$\delta_j$* is given by
 
 $$
 \begin{align}\label{eq:local_grad_expand}
@@ -204,9 +204,9 @@ $$
 \end{align}
 $$
 
-The above derivations suggest that the error signal plays a key role in computing the weight correction at the output neuron $$\emph{j}$$. Depending on where neuron $$\emph{j}$$ is located within the network determines how we deal with the correction,
-$$\(\Delta w_{ji}\)$$. If neuron $$\emph{j}$$ is an output node, like other output nodes, it is supplied with the corresponding desired output and this simplifies calculation of the error signal, see \Cref{eq:err_output}, and hence the local gradient.
-However if neuron $$\emph{j}$$ is a hidden node (part of a hidden layer), things get tricky. For instance, there is no specified desired output and we cannot compute the error directly. Instead, the error is computed recursively and working backwards in terms of the errors of
+The above derivations suggest that the error signal plays a key role in computing the weight correction at the output neuron *j*. Depending on where neuron *j* is located within the network determines how we deal with the correction,
+*$\Delta w_{ji}$*. If neuron *j* is an output node, like other output nodes, it is supplied with the corresponding desired output and this simplifies calculation of the error signal, see \Cref{eq:err_output}, and hence the local gradient.
+However if neuron *j* is a hidden node (part of a hidden layer), things get tricky. For instance, there is no specified desired output and we cannot compute the error directly. Instead, the error is computed recursively and working backwards in terms of the errors of
 all the neurons to which the hidden neuron is directly connected. Consider the case example shown in \Cref{} the  then things get rather tricky. Inste
 
 
