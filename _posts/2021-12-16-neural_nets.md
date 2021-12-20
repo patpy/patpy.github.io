@@ -20,7 +20,7 @@ In this post we will provide a mathematical background and context of the backpr
   
 A reference to the image (\autoref{!Crepe}).
 
-McCulloch and Pitts introduced the idea of biologically inspired computing machines(neural networks), and later Rosenblatt proposed the percetron as the first model of learning with examples (supervised learning)\textemdash \emph{McCulloch-Pitts} model of a neuron. 
+McCulloch and Pitts introduced the idea of biologically inspired computing machines(neural networks), and later Rosenblatt proposed the percetron as the first model of learning with examples (supervised learning)- *McCulloch-Pitts* model of a neuron. 
 The neural model consists of a linear combiner and a hard limiter as shown in **Figure 1**.
 
 A single layer neural network as described above is limited to classification of linearly separable patterns . In practice, beacuse a one layer neural network is a limitation, we consider neural networks with than one layer--multilayer perceptrons.
