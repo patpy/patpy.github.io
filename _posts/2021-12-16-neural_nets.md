@@ -45,9 +45,9 @@ $$\begin{equation}
 \end{equation}
 $$
 
-where $$\textbf{I}_j$$ is the set of nodes from the *$$i^{th}$$* layer which feeds node *j*.
+where *$\textbf{I}_j$* is the set of nodes from the *$i^{th}$* layer which feeds node *j*.
 
-# **The backpropagation algorithm-Training Multilayer Perceptrons**
+# **The Backpropagation Algorithm: Training Multilayer Perceptrons**
 
 The backpropagation algorithm is the most popular method by which neural
 networks are trained. We begin by specifying the parameters of our neural
@@ -61,7 +61,7 @@ error between the actual outputs—activation at the output layer—and the
 desired values. The algorithm achieves this objective by changing the values
 of the weights in the network. Since the back–propagation is an iterative al-
 gorithm, weights change incrementally. The change in weight is proportional
-to its influence on the error: the bigger the influence of weight w i , the larger
+to its influence on the error: the bigger the influence of weight *$w_i$*, the larger
 the reduction of error induced by changing the weight. In other words, the
 bigger the change our learning algorithm should make in that weight. Note
 that this influence is not the same everywhere, and changing any particu-
@@ -69,13 +69,13 @@ lar weight generally makes all the other weights more or less influential on
 the error. The process of adjusting weights is repeated until the error falls
 below some desired threshold, at which point the algorthim is considered to
 have learned the function of interest and the procedure terminates. For this
-reason, back–propagation is also known as a steepest descent algorithm.
+reason, the back–propagation is also known as a steepest descent algorithm.
 
 ## **Derivation**
 
 To describe the algorithm, let D = {x, d} be the set of example data. As
-shown in Equation (3), y j is the output of neuron j in the output layer due
-to input or simulus x. The error between desired value and neuron output
+shown in Equation (3), *$y_j$* is the output of neuron *j* in the output layer due
+to input or simulus *x*. The error between desired value and neuron output
 is exppressed as;
 
 $$\begin{equation}
@@ -87,8 +87,8 @@ $$
 |:--:|
 | <b> Figure 3: Training the perceptron. Demonstration of backpropagation training with a single neural processing unit given a training dataset.</b> |
 
-Figure 3 illustrates a neuron, j, being fed by a set of input neurons in the
-previous layer (i th ). The induced local field φ j associated with neuron j is
+Figure 3 illustrates a neuron, *j*, being fed by a set of input neurons in the
+previous layer (*$i^{th}$*). The induced local field *$φ_j$* associated with neuron *j* is
 described as,
 
 $$\begin{equation}
@@ -96,8 +96,8 @@ $$\begin{equation}
 \end{equation}
 $$
 
-where m is the number of neuronal inputs applied to neuron j. So y j , the
-output of neuron j at some iteration n, is defined as;
+where *m* is the number of neuronal inputs applied to neuron j. So *$y_j$* , the
+output of neuron *j* at some iteration n, is defined as;
 
 $$\begin{equation}
   y_j = f(\varphi_j),
@@ -185,7 +185,7 @@ $$
 \end{equation}
 $$
 
-Note that the correction applied to $$\emph{w}\(_{ji}\)$$, see \Cref{eq:weight_change} attempts to minimize the error $$\emph{E}$$ via gradient descent in the weight space.
+Note that the correction applied to $\emph{w}\(_{ji}\)$, see \Cref{eq:weight_change} attempts to minimize the error $$\emph{E}$$ via gradient descent in the weight space.
 Using \Cref{eq:partial_err_weight2} in \Cref{eq:weight_change} gives the following;
 
 $$
