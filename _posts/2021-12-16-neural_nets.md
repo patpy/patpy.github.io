@@ -83,7 +83,7 @@ $$\begin{equation}
 \end{equation}
 $$
 
- ![percep2](/assets/img/perceptron2.png){: .mx-auto.d-block :} |
+|![percep2](/assets/img/perceptron2.png){: .mx-auto.d-block :} |
 |:--:|
 | <b> Figure 3: Training the perceptron. Demonstration of backpropagation training with a single neural processing unit given a training dataset.</b> |
 
