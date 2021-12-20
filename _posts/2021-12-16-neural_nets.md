@@ -223,4 +223,6 @@ all the neurons to which the hidden neuron is directly connected. Consider the c
 |:--:|
 | <b> Figure 5: Training the perceptron. Demonstration of backpropagation training with a single neural processing unit given a training dataset.</b> |
 
+# C++ Implementation of Our Neural Network
 
+Now that etct etc...
