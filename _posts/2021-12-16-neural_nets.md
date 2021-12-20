@@ -118,7 +118,7 @@ $$
 \end{equation}
 $$
 
-Note that \Cref{eq:err} assumes that the $$\emph{j}\(^{th}\)$$ layer is the output  layer.
+Note that \Cref{eq:err} assumes that the *$j^{th}$* layer is the output  layer.
 
 The change in a weight connecting a node in the previous layer to a node
 in layer *j* is defined by,
