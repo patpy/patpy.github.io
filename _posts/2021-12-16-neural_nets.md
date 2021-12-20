@@ -9,7 +9,7 @@ katex: True
 comments: true
 ---
 
-**Background**
+# **Background**
 In this post we will provide a mathematical background and context of the backpropagation algorithm as well as discuss and implement, from ground up, a c++ library that can be used to create modular neuralnetworks.
 
 
@@ -47,7 +47,8 @@ $$
 
 where $$\textbf{I}_j$$ is the set of nodes from the *$$i^{th}$$* layer which feeds node *j*.
 
-**The backpropagation algorithm-Training Multilayer Perceptrons**
+# **The backpropagation algorithm-Training Multilayer Perceptrons**
+
 The backpropagation algorithm is the most popular method by which neural
 networks are trained. We begin by specifying the parameters of our neural
 network. As discussed in the previous section, feed-forward neural networks
@@ -69,3 +70,5 @@ the error. The process of adjusting weights is repeated until the error falls
 below some desired threshold, at which point the algorthim is considered to
 have learned the function of interest and the procedure terminates. For this
 reason, back–propagation is also known as a steepest descent algorithm.
+
+## **Derivation**
