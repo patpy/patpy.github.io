@@ -214,7 +214,13 @@ all the neurons to which the hidden neuron is directly connected. Consider the c
 | <b> Figure 4: Training the perceptron. Demonstration of backpropagation training with a single neural processing unit given a training dataset.</b> |
 
 
-|![percep3](/assets/img/perceptron4.png){: .mx-auto.d-block :} |
+|![percep4](/assets/img/perceptron4.png){: .mx-auto.d-block :} |
 |:--:|
 | <b> Figure 5: Training the perceptron. Demonstration of backpropagation training with a single neural processing unit given a training dataset.</b> |
+
+
+|![nnet2](/assets/img/neuralnet3b.png){: .mx-auto.d-block :} |
+|:--:|
+| <b> Figure 5: Training the perceptron. Demonstration of backpropagation training with a single neural processing unit given a training dataset.</b> |
+
 
