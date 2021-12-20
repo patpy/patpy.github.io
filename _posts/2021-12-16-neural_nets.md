@@ -15,7 +15,7 @@ In this post we will provide a mathematical background and context of the backpr
 
 | ![Crepe](/assets/img/perceptron.png){: .mx-auto.d-block :} |
 |:--:|
-| <b> Figure 1: **The perceptron.** A single neural processing unit. The inputs are multiplied =with corresponding weights and linearly combined. The result is then fed to the activation functin to produce the output.</b>|
+| <b> Figure 1: **The perceptron.** A single neural processing unit. The inputs are multiplied with corresponding weights and linearly combined. The result is then fed to the activation functin to produce the output.</b>|
 
   
 A reference to the image (\autoref{Crepe}).
