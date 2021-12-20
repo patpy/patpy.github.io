@@ -92,7 +92,7 @@ previous layer (i th ). The induced local field φ j associated with neuron j is
 described as,
 
 $$\begin{equation}
-  \varphi_j = \sum_{i=0}^m w_{ji}y_ix_i,
+  \varphi_j = \sum_{i=0}^m w_{ji}y_i,
 \end{equation}
 $$
 
