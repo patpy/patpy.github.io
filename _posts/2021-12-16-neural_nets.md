@@ -143,3 +143,69 @@ $$
   \frac{\partial \varphi_j}{\partial w_{ji}} = y_i
 \end{equation}
 $$
+
+Differentiating both sides of Equation (5) with respect to e j we get
+
+$$
+\begin{equation}\label{eq:err_diff}
+  \frac{\partial E}{\partial e_j} = e_j.
+\end{equation}
+$$
+
+Differentiating \Cref{eq:err_output} with respect to \emph{y}\(_j\), we get
+
+$$
+\begin{equation}\label{eq:err_output_diff}
+ \frac{\partial e_j}{\partial y_j} = -1.
+\end{equation}
+$$
+
+Differentiating \Cref{eq:neuron_out} with respect to \(\varphi_j\) yields
+
+$$
+\begin{equation}\label{eq:neuron_out_diff}
+  \frac{\partial y_j}{\partial \varphi_j} = f_j^\prime(\varphi_j).
+\end{equation}
+$$
+
+Differentiating the induced local field, \Cref{eq:local_field}, with respect to \emph{w}\(_{ji}\) gives,
+
+$$
+\begin{equation}\label{eq:local_field_diff}
+  \frac{\partial \varphi_j}{\partial w_{ji}} = y_i.
+\end{equation}
+$$
+
+Subsitituting \cref{eq:err_diff} to \cref{eq:local_field_diff} in \cref{eq:chain_rule} gives
+
+$$
+\begin{equation}\label{eq:partial_err_weight2}
+  \frac{\partial E}{\partial w_{ji}} = -e_j f_j^\prime(\varphi_j)y_j. 
+\end{equation}
+$$
+
+Note that the correction applied to $$\emph{w}\(_{ji}\)$$, see \Cref{eq:weight_change} attempts to minimize the error $$\emph{E}$$ via gradient descent in the weight space.
+Using \Cref{eq:partial_err_weight2} in \Cref{eq:weight_change} gives the following;
+
+$$
+\begin{equation}\label{eq:weight_change_delta}
+  \Delta w_{ji} = \alpha\delta_jy_i,
+\end{equation}
+$$
+
+where the local gradient $$\(\delta_j\)$$ is given by
+
+$$
+\begin{align}\label{eq:local_grad_expand}
+  \delta_j & = \frac{\partial E}{\partial \varphi_j} \\
+  & = \frac{\partial E}{\partial e_j} \frac{\partial e_j}{\partial y_j} \frac{\partial y_j}{\partial \varphi_j} \\
+  & = e_j f_j^\prime(\varphi_j)
+\end{align}
+$$
+
+The above derivations suggest that the error signal plays a key role in computing the weight correction at the output neuron $$\emph{j}$$. Depending on where neuron $$\emph{j}$$ is located within the network determines how we deal with the correction,
+$$\(\Delta w_{ji}\)$$. If neuron $$\emph{j}$$ is an output node, like other output nodes, it is supplied with the corresponding desired output and this simplifies calculation of the error signal, see \Cref{eq:err_output}, and hence the local gradient.
+However if neuron $$\emph{j}$$ is a hidden node (part of a hidden layer), things get tricky. For instance, there is no specified desired output and we cannot compute the error directly. Instead, the error is computed recursively and working backwards in terms of the errors of
+all the neurons to which the hidden neuron is directly connected. Consider the case example shown in \Cref{} the  then things get rather tricky. Inste
+
+
