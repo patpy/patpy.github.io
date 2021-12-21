@@ -18,9 +18,6 @@ In this post I describe a neural netwrok as well as provide mathematical derivat
 | <b> Figure 1: The perceptron. A single neural processing unit. The inputs are multiplied with corresponding weights and linearly combined. The result is then fed to the activation functin to produce the output.</b> |
 
 
-  
-A reference to the image (\autoref{!Crepe}).
-
 McCulloch and Pitts introduced the idea of biologically inspired computing machines known as neural networks. Building on McCulloch and Pitts idea, Rosenblatt proposed the percetron as the first model of learning with examples (supervised learning), called the *McCulloch-Pitts* model of a neuron. 
 The neural model consists of a linear combiner and a hard limiter as shown in **Figure 1**.
 
