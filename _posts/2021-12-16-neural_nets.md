@@ -10,7 +10,7 @@ comments: true
 ---
 
 # **Background**
-In this post we will provide a mathematical background and context of the backpropagation algorithm as well as discuss and implement, from ground up, a c++ library that can be used to create modular neuralnetworks.
+In this post I describe a neural netwrok as well as provide mathematical derivations of the backpropagation algorithm (commonly used to train neural networks) from ground up. I also discuss and provide a practical and modular C++ implementation of of neural networks.
 
 
 | ![Crepe](/assets/img/perceptron.png){: .mx-auto.d-block :} |
@@ -21,10 +21,10 @@ In this post we will provide a mathematical background and context of the backpr
   
 A reference to the image (\autoref{!Crepe}).
 
-McCulloch and Pitts introduced the idea of biologically inspired computing machines(neural networks), and later Rosenblatt proposed the percetron as the first model of learning with examples (supervised learning)- *McCulloch-Pitts* model of a neuron. 
+McCulloch and Pitts introduced the idea of biologically inspired computing machines known as neural networks. Building on McCulloch and Pitts idea, Rosenblatt proposed the percetron as the first model of learning with examples (supervised learning), called the *McCulloch-Pitts* model of a neuron. 
 The neural model consists of a linear combiner and a hard limiter as shown in **Figure 1**.
 
-A single layer neural network as described above is limited to classification of linearly separable patterns . In practice, beacuse a one layer neural network is a limitation, we consider neural networks with than one layer--multilayer perceptrons.
+A single layer neural network as described above, **Figure 1**, is limited to classification of linearly separable patterns. In practice, a one layer neural network is a limitation, and so consideration is given to neural networks with than one layer--multilayer perceptrons.
 Multilayer perceptrons are characterized by:
 * Differentiable nonlinear activation function for each neuron
 * one or more hidden layers (they are hidden from both input and output layers)
@@ -37,7 +37,6 @@ In this post, we will restrict ourselves to feed-forward neural networks, as sho
 | ![nnet](/assets/img/neuralnet.png){: .mx-auto.d-block :} |
 |:--:|
 | <b> Figure 2: Neural network activation flows from one layer to another. A demonstration of a multilayer perceptron with D inputs and C output "neurons". .</b> |
-
 
 The neural network arhitecture is “feed-forward” because nodes within a particular layer are connected only to nodes in the immediately “down-stream” layer. In this way, nodes in the input layer only activate nodes in the subsequent hidden layer. The subsequent hidden layer, in turn, will only activate nodes in the next hidden layer. This remains true until the nodes of the most down-stream hidden layer. The most down-stream hidden layer then feeds the output layer; see illustration in \cref{fig:multilayer-perceptron}. While every node is connected to every node in \cref{fig:multilayer-perceptron}, layers are not generally fully connected. Nodes from some layer, say *i* that innervate the *$j^{th}$* node in the subsequent layer *j* are in general a subset of the $\textbf{I}$ nodes that constitute the *$i^{th}$* layer. We denote this subset by $\textbf{I}_k$. So the weighted sum of the inputs is described as:
 
