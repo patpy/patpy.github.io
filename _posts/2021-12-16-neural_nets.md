@@ -17,6 +17,12 @@ In this post we will provide a mathematical background and context of the backpr
 |:--:|
 | <b> Figure 1: The perceptron. A single neural processing unit. The inputs are multiplied with corresponding weights and linearly combined. The result is then fed to the activation functin to produce the output.</b> |
 
+
+
+[img](/assets/img/perceptron.png "This is title"){: .mx-auto.d-block :} 
+![Alt text \label{mylabel}][img]
+See figure \ref{mylabel}.
+
   
 A reference to the image (\autoref{!Crepe}).
 
