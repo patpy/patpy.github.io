@@ -19,7 +19,7 @@ In this post we will provide a mathematical background and context of the backpr
 
 
 
-![img](/assets/img/perceptron.png "This is title"){#fig:percep}
+![fig:percep](/assets/img/perceptron.png "Use as caption")
 
 
 See figure \cref{mylabel1}.
