@@ -22,6 +22,8 @@ In this post we will provide a mathematical background and context of the backpr
 ![fig:percep](/assets/img/perceptron.png "Use as caption")
 
 
+{{< figure src="/assets/img/perceptron.png" caption="A caption" numbered="true" >}}
+
 See [figure][fig:percep].
 
   
