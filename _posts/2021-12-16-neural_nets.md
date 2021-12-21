@@ -22,8 +22,8 @@ In this post we will provide a mathematical background and context of the backpr
 ![fig:percep](/assets/img/perceptron.png "Use as caption")
 
 
-See figure \cref{mylabel1}.
-See figuyre @fig:percep
+See [figure][fig:percep].
+
   
 A reference to the image (\autoref{!Crepe}).
 
