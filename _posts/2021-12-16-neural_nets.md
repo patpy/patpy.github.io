@@ -109,7 +109,7 @@ where f (·) is the activation function.
 
 We need to define a meaure of error for our back–propagation algorithm;
 we consider the error energy each output node. It ensures that positive and
-negative errors do not canel each other out. We modify Equation \ref{eq:err) by
+negative errors do not canel each other out. We modify Equation \ref{eq:err} by
 square the differences before summing them. In addition, we scale the sum
 of errors by 1/2 for convenience:
 
