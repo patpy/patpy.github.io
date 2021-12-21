@@ -19,7 +19,8 @@ In this post we will provide a mathematical background and context of the backpr
 
 
 
-![Alt text \label{mylabel1} img](/assets/img/perceptron.png "This is title")
+![img](/assets/img/perceptron.png "This is title")
+![Alt text \label{mylabel1}][img] 
 
 See figure \ref{mylabel1}.
 
