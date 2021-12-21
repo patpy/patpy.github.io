@@ -46,17 +46,16 @@ where *$\textbf{I}_j$* is the set of nodes from the *$i^{th}$* layer which feeds
 # **The Backpropagation Algorithm: Training Multilayer Perceptrons**
 
 The backpropagation algorithm is the most popular method by which neural
-networks are trained. We begin by specifying the parameters of our neural
-network. As discussed in the previous section, feed-forward neural networks
-on which we deploy our backpropagation learning algorithm consist of layers
+networks are trained. I will begin by specifying the parameters of the neural
+network. Recall, as per discussion in the previous section, that feed-forward neural networks
+on which the backpropagation learning algorithm is deployed consist of layers
 classified as input, hidden, and output. In this configuration, there is only
-one input layer and one output layer; the number of hidden layers is only
-limited by available resources.
-In general, a supervised learning algorithm attempts to minimize the
-error between the actual outputs—activation at the output layer—and the
-desired values. The algorithm achieves this objective by changing the values
-of the weights in the network. Since the back–propagation is an iterative al-
-gorithm, weights change incrementally. The change in weight is proportional
+one input layer and one output layer. The number of hidden layers is only
+limited by available computing resources. 
+
+Fundamentally, a supervised learning algorithm attempts to minimize the error between the actual output values (activations at the output layer for neural networks) and the desired values. The algorithm achieves this objective by changing the values
+of the weights in the network. Note that the back–propagation is an iterative al-
+gorithm and a consequency, weights change incrementally. The change in weight is proportional
 to its influence on the error: the bigger the influence of weight *$w_i$*, the larger
 the reduction of error induced by changing the weight. In other words, the
 bigger the change our learning algorithm should make in that weight. Note
