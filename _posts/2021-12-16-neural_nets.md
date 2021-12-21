@@ -80,7 +80,7 @@ is exppressed as;
 
 $$\begin{equation}
   e_j = d_j - y_j.
-  (\#eq:err)
+  \label{eq:err}
 \end{equation}
 $$
 
@@ -109,12 +109,12 @@ where f (·) is the activation function.
 
 We need to define a meaure of error for our back–propagation algorithm;
 we consider the error energy each output node. It ensures that positive and
-negative errors do not canel each other out. We modify Equation \@ref{eq:err) by
+negative errors do not canel each other out. We modify Equation \ref{eq:err) by
 square the differences before summing them. In addition, we scale the sum
 of errors by 1/2 for convenience:
 
 $$
-\begin{equation}\label{eq:err}
+\begin{equation}\label{eq:err2}
   E \coloneqq \frac{1}{2} \sum_{i=1}^m(d_j - y_i)^2 = \frac{1}{2}\sum_{i=1}^me_j^2.
 \end{equation}
 $$
