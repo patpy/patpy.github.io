@@ -19,11 +19,11 @@ In this post we will provide a mathematical background and context of the backpr
 
 
 
-![img](/assets/img/perceptron.png "This is title")
-![Alt text \label{mylabel1}][img] 
+![img](/assets/img/perceptron.png "This is title"){#fig:percep}
+
 
 See figure \cref{mylabel1}.
-
+See figuyre @fig:percep
   
 A reference to the image (\autoref{!Crepe}).
 
