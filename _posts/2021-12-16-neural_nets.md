@@ -24,7 +24,7 @@ More importantly, multilayer perceptrons are characterized by the following:
 * Differentiable nonlinear activation function for each neuron
 * one or more hidden layers (they are hidden from both input and output layers)
 * High a degree of connectivity
-  
+Note that above characteristics make it difficult for scientists and Engineers to understand the behavior of neural networks: High connectivity and nonlinearity, for example, are difficult to analyze theoretically, and it is challenging to acquire a good intuition of the learning process of hidden layers since they are difficult to visualize.
 
 In this post, I am going to focus only on feed-forward neural networks.   
 
