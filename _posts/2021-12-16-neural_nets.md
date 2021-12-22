@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Neural Network
+title: Neural Network - still under construction
 subtitle: Mathematical Description and Implementation in C++ 
 gh-repo: 
 gh-badge: 
