@@ -10,18 +10,16 @@ comments: true
 ---
 
 # **Background**
-In this post I describe a neural netwrok as well as provide mathematical derivations of the backpropagation algorithm (commonly used to train neural networks) from ground up. I also discuss and provide a practical and modular C++ implementation of of neural networks.
-
+In this post I describe neural networks as well as provide mathematical derivations of the back-propagation algorithm (commonly used to train neural networks) from ground up. I also discuss and provide a practical and modular C++ implementation of of neural networks.
 
 | ![Crepe](/assets/img/perceptron.png){: .mx-auto.d-block :} |
 |:--:|
 | <b> Figure 1: The perceptron. A single neural processing unit. The inputs are multiplied with corresponding weights and linearly combined. The result is then fed to the activation functin to produce the output.</b> |
 
-
-McCulloch and Pitts introduced the idea of biologically inspired computing machines known as neural networks. Building on McCulloch and Pitts idea, Rosenblatt proposed the percetron as the first model of learning with examples (supervised learning), called the *McCulloch-Pitts* model of a neuron. 
+McCulloch and Pitts introduced the idea of biologically inspired computing machines known as neural networks. Building on the McCulloch and Pitts idea, Rosenblatt proposed the perceptron as the first model of learning with examples (supervised learning), called the *McCulloch-Pitts* model of a neuron. 
 The neural model consists of a linear combiner and a hard limiter as shown in **Figure 1**.
 
-A single layer neural network as described above, **Figure 1**, is limited to classification of linearly separable patterns. In practice, a one layer neural network is a limitation, and so consideration is given to neural networks with more than one layer--multilayer perceptrons, see **Figure 2**.
+A single layer neural network as described above, **Figure 1**, is of limited practical use; it can only do classification for linearly separable patterns. In the real world, it is more common to give consideration to neural networks with more than one layer---multilayer perceptrons, see **Figure 2**.
 More importantly, multilayer perceptrons are characterized by the following:
 * Differentiable nonlinear activation function for each neuron
 * one or more hidden layers (they are hidden from both input and output layers)
@@ -34,7 +32,7 @@ In this post, I am going to focus only on feed-forward neural networks.
 |:--:|
 | <b> Figure 2: A feed forward neural network activation flows from one layer to immediate "down-stream" layer. A demonstration of a multilayer perceptron with D inputs and C output "neurons".</b> |
 
-A neural network arhitecture is “feed-forward” when nodes within a particular layer are connected only to nodes in the immediately “down-stream” layer. In this way, nodes in the input layer only activate nodes in the subsequent hidden layer. The subsequent hidden layer, in turn, will only activate nodes in the next hidden layer. This remains true until the nodes of the most down-stream hidden layer. The most down-stream hidden layer then feeds the output layer; see illustration in **Figure 2**. While every node is connected to every node in \cref{fig:multilayer-perceptron}, layers are not generally fully connected. Nodes from some layer, say *i* that innervate the *$j^{th}$* node in the subsequent layer *j* are in general a subset of the $\textbf{I}$ nodes that constitute the *$i^{th}$* layer. We denote this subset by $\textbf{I}_k$. So the weighted sum of the inputs is described as:
+A neural network architecture is “feed-forward” when nodes within a particular layer are connected only to nodes in the immediately “down-stream” layer. In this way, nodes in the input layer only activate nodes in the subsequent hidden layer. The subsequent hidden layer, in turn, will only activate nodes in the next hidden layer. This remains true until the nodes of the most down-stream hidden layer. The most down-stream hidden layer then feeds the output layer; see illustration in **Figure 2**. While every node is connected to every node in, as shown in **Figure 2**, layers are not generally fully connected. Nodes from some layer, say *i* that innervate the *$j^{th}$* node in the subsequent layer *j* are in general a subset of the $\textbf{I}$ nodes that constitute the *$i^{th}$* layer. We denote this subset by $\textbf{I}_k$. So the weighted sum of the inputs is described as:
 
 $$\begin{equation}
   \varphi_j = \sum_{i\in I_j}x_i,
