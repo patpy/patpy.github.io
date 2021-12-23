@@ -131,7 +131,7 @@ However if neuron *j* is a hidden node (part of a hidden layer), it is not trivi
 all the neurons to which the hidden neuron is directly connected.
 
 
-Differentiating both sides of Equation \{eq:err_sq} with respect to *$e_j$* we get
+Differentiating both sides of Equation \ref{eq:err_sq} with respect to *$e_j$* we get
 
 $$
 \begin{equation}
