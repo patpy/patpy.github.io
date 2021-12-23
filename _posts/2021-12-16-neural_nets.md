@@ -182,15 +182,17 @@ The change in a weight connecting a node in the previous layer to a node
 in layer *j* is defined by,
 
 $$
-\begin{equation}\label{eq:weight_change}
+\begin{equation}
   \Delta w_{ji} = -\alpha \frac{\partial E}{\partial w_{ji}}.
+  \label{eq:weight_change}
 \end{equation}
 $$
 
 Note that $\alpha$ is a free parameter (learning rate) that we set at the beginning of training. With $\alpha$, we can set the step size that is appropriate for the problem at hand. The adjustment of $\alpha$ between values of 0 and 1--is usually ad-hoc. The negative sign in the formular suggestes that the weights change in the direction of decreasing error. 
 $$
-\begin{equation}\label{eq:partial_local_field}
-  \frac{\partial \varphi_j}{\partial w_{ji}} = y_i
+\begin{equation}
+  \frac{\partial \varphi_j}{\partial w_{ji}} = y_i.
+  \label{eq:partial_local_field}
 \end{equation}
 $$
 
@@ -207,10 +209,11 @@ $$
 where the local gradient *$\delta_j$* is given by
 
 $$
-\begin{align}\label{eq:local_grad_expand}
+\begin{align}
   \delta_j & = \frac{\partial E}{\partial \varphi_j} \\
-  & = \frac{\partial E}{\partial e_j} \frac{\partial e_j}{\partial y_j} \frac{\partial y_j}{\partial \varphi_j} \\
-  & = e_j f_j^\prime(\varphi_j)
+  & \frac{\partial E}{\partial e_j} \frac{\partial e_j}{\partial y_j} \frac{\partial y_j}{\partial \varphi_j} \\
+  & e_j f_j^\prime(\varphi_j)
+  \label{eq:local_grad_expand}
 \end{align}
 $$
 
