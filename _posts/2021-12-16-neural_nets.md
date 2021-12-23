@@ -60,6 +60,9 @@ to its influence on the error: the bigger the influence of weight *$w_i$*, the l
 bigger the change our learning algorithm should make in that weight. Note that this influence is not the same everywhere (and in somes cases some weights are fixed by design and never change throughout the training process), and changing any particular weight generally makes all the other weights more or less influential on the error. The process of adjusting weights is repeated until the error falls below some desired threshold, at which point the algorthim is considered to have learned the function of interest and the procedure terminates. For this reason, the back–propagation is also known as a steepest descent algorithm.
 
 ## **Derivation**
+|![percep2](/assets/img/perceptron2.png){: .mx-auto.d-block :} |
+|:--:|
+| <b> Figure 3: Neural network graph. Demonstration of backpropagation training with a single neural processing unit given a training dataset and computation of the error between desired and neuron output.</b> |
 
 Figure 3 illustrates a neuron, *j*, being fed by a set of input neurons in the
 previous layer (*$i^{th}$*). The induced local field *$φ_j$* associated with neuron *j* is
@@ -115,9 +118,7 @@ However if neuron *j* is a hidden node (part of a hidden layer), things get tric
 all the neurons to which the hidden neuron is directly connected.
 
 
-|![percep2](/assets/img/perceptron2.png){: .mx-auto.d-block :} |
-|:--:|
-| <b> Figure 3: Neural network graph. Demonstration of backpropagation training with a single neural processing unit given a training dataset and computation of the error between desired and neuron output.</b> |
+
 
 
 The back-propagation updates synaptic weight $w_{ji}$ with weight correction $\Delta w_{ji}$, which is proportional to the following partial derivative:
