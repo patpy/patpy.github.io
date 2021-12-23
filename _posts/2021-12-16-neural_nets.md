@@ -113,7 +113,7 @@ $$
 \end{equation}
 $$
 
-where $\varphi_j$ is the weigted sum of inputs into the *$j\(^{th}\)$* node. The partial derivative $\partial E / \partial w_{ji}$ represents a sensitivity factor for determining the direction of the search in the weight space for synaptic weight *$w_{ji}$.
+where $\varphi_j$ is the weigted sum of inputs into the *$j\(^{th}\)$* node. The partial derivative $\partial E / \partial w_{ji}$ represents a sensitivity factor for determining the direction of the search in the weight space for synaptic weight $w_{ji}$.
 
 
 The change in a weight connecting a node in the previous layer to a node
