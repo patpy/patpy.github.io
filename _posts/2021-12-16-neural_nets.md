@@ -112,10 +112,6 @@ $$
 
 Note that \ref{eq:err_sq} assumes that the *$j^{th}$* layer is the output  layer.
 
-The above derivations suggest that the error signal plays a key role in computing the weight correction at the output neuron *j*. Depending on where neuron *j* is located within the network determines how we deal with the correction, *$\Delta w_{ji}$*. If neuron *j* is an output node, like other output nodes, it is supplied with the corresponding desired output and this simplifies calculation of the error signal, and hence the local gradient.
-However if neuron *j* is a hidden node (part of a hidden layer), it is not trivial to determine the error. For instance, there is no specified desired output and we cannot compute the error directly. Instead, the error is computed recursively and working backwards in terms of the errors of
-all the neurons to which the hidden neuron is directly connected.
-
 The back-propagation updates synaptic weight $w_{ji}$ with weight correction $\Delta w_{ji}$, which is proportional to the following partial derivative:
 $\frac{\partial E}{\partial w_{ji}}$.
 
@@ -131,6 +127,12 @@ $$
 where $\varphi_j$ is the weigted sum of inputs into the *$j\(^{th}\)$* node. The partial derivative $\partial E / \partial w_{ji}$ represents a sensitivity factor for determining the direction of the search in the weight space for synaptic weight *$w_{ji}$*.
 
 
+The above derivations suggest that the error signal plays a key role in computing the weight correction at the output neuron *j*. Depending on where neuron *j* is located within the network determines how we deal with the correction, *$\Delta w_{ji}$*. If neuron *j* is an output node, like other output nodes, it is supplied with the corresponding desired output and this simplifies calculation of the error signal, and hence the local gradient.
+However if neuron *j* is a hidden node (part of a hidden layer), it is not trivial to determine the error. For instance, there is no specified desired output and we cannot compute the error directly. Instead, the error is computed recursively and working backwards in terms of the errors of
+all the neurons to which the hidden neuron is directly connected.
+
+
+~~Arrange things here~~
 The change in a weight connecting a node in the previous layer to a node
 in layer *j* is defined by,
 
