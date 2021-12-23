@@ -167,7 +167,7 @@ $$
 \end{equation}
 $$
 
-Subsitituting \ref{eq:err_diff} with \ref{eq:local_field_diff} in \ref{eq:chain_rule} gives
+Subsitituting Equations \ref{eq:err_diff}-\ref{eq:local_field_diff} in \ref{eq:chain_rule} gives
 
 $$
 \begin{equation}
