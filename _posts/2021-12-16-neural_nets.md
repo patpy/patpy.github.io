@@ -19,12 +19,12 @@ In this post I describe neural networks as well as provide mathematical derivati
 McCulloch and Pitts introduced the idea of biologically inspired computing machines known as neural networks. Building on the McCulloch and Pitts idea, Rosenblatt proposed the perceptron as the first model of learning with examples (supervised learning), called the *McCulloch-Pitts* model of a neuron. 
 The neural model consists of a linear combiner and a hard limiter as shown in **Figure 1**.
 
-A single layer neural network as described above, **Figure 1**, is of limited practical use; it can only do classification for linearly separable patterns. In the real world, it is more common to give consideration to neural networks with more than one layer---multilayer perceptrons, see **Figure 2**.
-More importantly, multilayer perceptrons are characterized by the following:
+A single layer neural network as described above, **Figure 1**, is of limited practical use; it can only do classification for linearly separable patterns. In the real world, neural network designs consider neural networks with more than one layer---multilayer perceptrons, see **Figure 2**.
+Multilayer perceptrons are characterized by the following features:
+* One or more hidden layers (they are hidden from both input and output layers)
 * Differentiable nonlinear activation function for each neuron
-* one or more hidden layers (they are hidden from both input and output layers)
 * High a degree of connectivity
-Note that above characteristics make it difficult for scientists and Engineers to understand the behavior of neural networks: High connectivity and nonlinearity, for example, are difficult to analyze theoretically, and it is challenging to acquire a good intuition of the learning process of hidden layers since they are difficult to visualize.
+The above mentioned characteristics of multilayer perceptrons make it to understand the behavior of neural networks: High connectivity and nonlinearity, for example, are difficult to analyze theoretically, and it is challenging to acquire a good intuition of the learning process of hidden layers since they are difficult to visualize.
 
 In this post, I am going to focus only on feed-forward neural networks.   
 
@@ -43,8 +43,14 @@ where *$\textbf{I}_j$* is the set of nodes from the *$i^{th}$* layer which feeds
 
 # **The Backpropagation Algorithm: Training Multilayer Perceptrons**
 
-The backpropagation algorithm is the most popular method by which neural
-networks are trained. I will begin by specifying the parameters of the neural
+The back-propagation algorithm is the most popular method by which neural
+networks are trained. The back-propagation can be seen essentially as an implementation of gradient descent.
+
+Training with the back-propagation proceeds in two phases:
+1 *Forward* phase---in this phase the synaptic weights of the network are fixed and the input signal is propagated through the network on  al yer by layer basis until it reaches the output layer.
+2 *Backward* phase---in this phase, the error signal is produced by comparing the output and a known desired resposen
+
+... I will begin by specifying the parameters of the neural
 network. Recall, as per discussion in the previous section, that feed-forward neural networks
 on which the backpropagation learning algorithm is deployed consist of layers
 classified as input, hidden, and output. In this configuration, there is only
