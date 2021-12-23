@@ -220,9 +220,6 @@ $$
 $$
 
 
-
- Consider the case example shown in \Cref{} the  then things get rather tricky. Inste
-
 |![percep3](/assets/img/perceptron3.png){: .mx-auto.d-block :} |
 |:--:|
 | <b> Figure 4: Back-propagation on a neuron located in a hidden layer.</b> |
