@@ -41,33 +41,23 @@ $$
 
 where *$\textbf{I}_j$* is the set of nodes from the *$i^{th}$* layer which feeds node *j*.
 
-# **The Backpropagation Algorithm: Training Multilayer Perceptrons**
+# **The Backpropagation Algorithm: On-line Training of Multilayer Perceptrons**
 
-The back-propagation algorithm is the most popular method by which neural
-networks are trained. The back-propagation can be seen essentially as an implementation of gradient descent.
-Training with the back-propagation proceeds in two phases:
-1. *Forward* phase---in this phase the synaptic weights of the network are fixed and the input signal is propagated through the network on  al yer by layer basis until it reaches the output layer.
-2. *Backward* phase---in this phase, first an error signal is produced by comparing the output of the network and a known desired response. The resulting error signal is then propagated through the network, layer by layer in the backward direction. In this phase adjustments to weights are made to synaptic weights of the neural network.
-
-... I will begin by specifying the parameters of the neural
-network. Recall, as per discussion in the previous section, that feed-forward neural networks
+Recall, as per discussion in the previous section, that feed-forward neural networks
 on which the backpropagation learning algorithm is deployed consist of layers
 classified as input, hidden, and output. In this configuration, there is only
 one input layer and one output layer. The number of hidden layers is only
 limited by available computing resources. 
 
-Fundamentally, a supervised learning algorithm attempts to minimize the error between the actual output values (activations at the output layer for neural networks) and the desired values. The algorithm achieves this objective by changing the values
-of the weights in the network. Note that the back–propagation is an iterative al-
-gorithm and a consequency, weights change incrementally. The change in weight is proportional
-to its influence on the error: the bigger the influence of weight *$w_i$*, the larger
-the reduction of error induced by changing the weight. In other words, the
-bigger the change our learning algorithm should make in that weight. Note
-that this influence is not the same everywhere, and changing any particu-
-lar weight generally makes all the other weights more or less influential on
-the error. The process of adjusting weights is repeated until the error falls
-below some desired threshold, at which point the algorthim is considered to
-have learned the function of interest and the procedure terminates. For this
-reason, the back–propagation is also known as a steepest descent algorithm.
+The back-propagation algorithm is the most popular method by which neural
+networks are trained. Training with the back-propagation proceeds in two phases:
+1. *Forward* phase---in this phase the synaptic weights of the network are fixed and the input signal is propagated through the network on  al yer by layer basis until it reaches the output layer.
+2. *Backward* phase---in this phase, first an error signal is produced by comparing the output of the network and a known desired response. The resulting error signal is then propagated through the network, layer by layer in the backward direction. In this phase adjustments to weights are made to synaptic weights of the neural network.
+
+Fundamentally, a supervised learning algorithm attempts to minimize the error between the actual output values (activations at the output layer for neural networks) and the desired values. The algorithm achieves this objective by changing the values of the weights in the network. 
+Because the back–propagation is an iterative algorithm, weights change incrementally. The change in weight is proportional
+to its influence on the error: the bigger the influence of weight *$w_i$*, the larger the reduction of error induced by changing the weight. In other words, the
+bigger the change our learning algorithm should make in that weight. Note that this influence is not the same everywhere (and in somes cases some weights are fixed by design and never change throughout the training process), and changing any particular weight generally makes all the other weights more or less influential on the error. The process of adjusting weights is repeated until the error falls below some desired threshold, at which point the algorthim is considered to have learned the function of interest and the procedure terminates. For this reason, the back–propagation is also known as a steepest descent algorithm.
 
 ## **Derivation**
 
