@@ -222,6 +222,9 @@ $$
 |:--:|
 | <b> Figure 4: Training the perceptron. Demonstration of backpropagation training with a single neural processing unit given a training dataset.</b> |
 
+### Case A: Neuron is an Output Node
+
+### Case A: Neuron is a Hidden Node
 
 |![percep4](/assets/img/perceptron4.png){: .mx-auto.d-block :} |
 |:--:|
