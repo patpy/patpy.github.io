@@ -95,6 +95,17 @@ $$
 
 where f (·) is the activation function.
 
+The back-propagation updates synaptic weight $w_{ji}$ with weight correction $\Delta w_{ji}$, which is proportional to the following partial derivative:
+$\frac{\partial E}{\partial w_{ji}}$.
+
+By the chain rule, we expand the partial derivative as follows:
+$$
+\begin{equation}\label{eq:chain_rule}
+  \frac{\partial E}{\partial w_{ji}} = \frac{\partial E}{\partial e_j} \frac{\partial e_j}{\partial y_j} \frac{\partial y_j}{\partial \varphi_j} \frac{\partial \varphi_j}{\partial w_{ji}},
+\end{equation}
+$$
+
+where $\varphi_j$ is the weigted sum of inputs into the *$j\(^{th}\)$* node. The partial derivative $\partial E / \partial w_{ji}$ represents a sensitivity factor for determining the direction of the serach in the weight space for synaptic weight *$w_{ji}$.
 
 
 The change in a weight connecting a node in the previous layer to a node
@@ -106,16 +117,7 @@ $$
 \end{equation}
 $$
 
-Note that $\alpha$ is a free parameter (learning rate) that we set at the beginning of training. With $\alpha$, we can set the step size that is appropriate for the problem at hand. The adjustment of $\alpha$ between values of 0 and 1--is usually ad-hoc. The negative sign in the formular suggestes that the weights change in the direction of decreasing error. By the chain rule, we expand the partial derivative as follows:
-
-$$
-\begin{equation}\label{eq:chain_rule}
-  \frac{\partial E}{\partial w_{ji}} = \frac{\partial E}{\partial e_j} \frac{\partial e_j}{\partial y_j} \frac{\partial y_j}{\partial \varphi_j} \frac{\partial \varphi_j}{\partial w_{ji}},
-\end{equation}
-$$
-
-where $\varphi_j$ is the weigted sum of inputs into the *$j\(^{th}\)$* node. The partial derivative $\partial E / \partial w_{ji}$ represents a sensitivity factor for determining the direction of the serach in the weight space for synaptic weight *$w_{ji}$.
-
+Note that $\alpha$ is a free parameter (learning rate) that we set at the beginning of training. With $\alpha$, we can set the step size that is appropriate for the problem at hand. The adjustment of $\alpha$ between values of 0 and 1--is usually ad-hoc. The negative sign in the formular suggestes that the weights change in the direction of decreasing error. 
 $$
 \begin{equation}\label{eq:partial_local_field}
   \frac{\partial \varphi_j}{\partial w_{ji}} = y_i
