@@ -35,7 +35,7 @@ In this post, I am going to focus only on feed-forward neural networks.
 A neural network architecture is “feed-forward” when nodes within a particular layer are connected only to nodes in the immediately “down-stream” layer. In this way, nodes in the input layer only activate nodes in the subsequent hidden layer. The subsequent hidden layer, in turn, will only activate nodes in the next hidden layer. This remains true until the nodes of the most down-stream hidden layer. The most down-stream hidden layer then feeds the output layer; see illustration in **Figure 2**. While every node is connected to every node in, as shown in **Figure 2**, layers are not generally fully connected. Nodes from some layer, say *i* that innervate the *$j^{th}$* node in the subsequent layer *j* are in general a subset of the $\textbf{I}$ nodes that constitute the *$i^{th}$* layer. We denote this subset by $\textbf{I}_k$. So the weighted sum of the inputs is described as:
 
 $$\begin{equation}
-  \varphi_j = \sum_{i\in I_j}x_i,
+  \varphi_j = \sum_{i\in I_j}x_iw_{ji},
 \end{equation}
 $$
 
