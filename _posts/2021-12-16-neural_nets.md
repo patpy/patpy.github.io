@@ -140,7 +140,7 @@ $$
 \end{equation}
 $$
 
-Differentiating \ref{eq:err} with respect to *$y_j$*, we get
+Differentiating Equation \ref{eq:err} with respect to *$y_j$*, we get
 
 $$
 \begin{equation}
@@ -149,7 +149,7 @@ $$
 \end{equation}
 $$
 
-Differentiating \ref{eq:output} with respect to *$\varphi_j$* yields
+Differentiating Equation \ref{eq:output} with respect to *$\varphi_j$* yields
 
 $$
 \begin{equation}
@@ -158,7 +158,7 @@ $$
 \end{equation}
 $$
 
-Differentiating the induced local field, \ref{eq:local_field}, with respect to *$w_{ji}$* gives,
+Differentiating the induced local field, Equation \ref{eq:local_field}, with respect to *$w_{ji}$* gives,
 
 $$
 \begin{equation}
