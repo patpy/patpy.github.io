@@ -172,7 +172,7 @@ $$
 \end{equation}
 $$
 
-Differentiating the induced local field, \Cref{eq:local_field}, with respect to *$w_{ji}$* gives,
+Differentiating the induced local field, \ref{eq:local_field}, with respect to *$w_{ji}$* gives,
 
 $$
 \begin{equation}\label{eq:local_field_diff}
