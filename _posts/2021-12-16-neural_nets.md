@@ -220,11 +220,15 @@ $$
 
 |![percep3](/assets/img/perceptron3.png){: .mx-auto.d-block :} |
 |:--:|
-| <b> Figure 4: Training the perceptron. Demonstration of backpropagation training with a single neural processing unit given a training dataset.</b> |
+| <b> Figure 4: Back-propagation on a neuron located in a hidden layer.</b> |
 
 ### Case A: Neuron is an Output Node
+
 Suppose that neuron *j* is an output node. Then it is suplied with a corresponding desired or target value. In this case, we may rely on Equation \ref{eq:err} to compute the error *$e_j$* associated with the neuron. This makes computing the local gradient $\delta_j$ trivial. 
 ### Case B: Neuron is a Hidden Node
+
+When neuron *j* is part of a hidden layer of the neural network, no desired response is specified for this neuron. Instead, the error signal has to be determined recursively and working backwards in terms of the error of all neurons to whic the hidden neurin is directly connected. Consider scenario as shown in **Figure 4**  
+
 
 |![percep4](/assets/img/perceptron4.png){: .mx-auto.d-block :} |
 |:--:|
