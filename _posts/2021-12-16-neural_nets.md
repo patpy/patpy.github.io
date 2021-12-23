@@ -63,7 +63,7 @@ bigger the change our learning algorithm should make in that weight. Note that t
 
 To describe the algorithm, let D = {x, d} be the set of example data. As
 shown in Equation (3), *$y_j$* is the output of neuron *j* in the output layer due
-to input or simulus *x*. The error between desired value and neuron output
+to some input or simulus *x*. The error between desired value and neuron output
 is exppressed as;
 
 $$\begin{equation}
@@ -74,7 +74,7 @@ $$
 
 |![percep2](/assets/img/perceptron2.png){: .mx-auto.d-block :} |
 |:--:|
-| <b> Figure 3: Training the perceptron. Demonstration of backpropagation training with a single neural processing unit given a training dataset.</b> |
+| <b> Figure 3: Neural network graph. Demonstration of backpropagation training with a single neural processing unit given a training dataset and computation of the error between desired and neuron output.</b> |
 
 Figure 3 illustrates a neuron, *j*, being fed by a set of input neurons in the
 previous layer (*$i^{th}$*). The induced local field *$φ_j$* associated with neuron *j* is
