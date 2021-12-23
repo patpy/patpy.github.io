@@ -71,7 +71,7 @@ $$\begin{equation}
 \end{equation}
 $$
 
-where *m* is the number of neuronal inputs applied to neuron *j*. So *$y_j$* , the
+where *m* is the number of neuronal inputs applied to neuron *j*. So *$y_j$* is the
 output of neuron *j* at some iteration n, is defined as;
 
 $$\begin{equation}
