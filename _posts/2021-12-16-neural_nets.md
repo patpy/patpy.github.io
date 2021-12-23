@@ -197,8 +197,8 @@ $$
 $$
 
 
-Note that the correction applied to *$w_{ji}$*, see \Cref{eq:weight_change} attempts to minimize the error *E* via gradient descent in the weight space.
-Using \Cref{eq:partial_err_weight2} in \Cref{eq:weight_change} gives the following;
+Note that the correction applied to *$w_{ji}$*, see \ref{eq:weight_change} attempts to minimize the error *E* via gradient descent in the weight space.
+Using Equation \ref{eq:partial_err_weight2} in Equation \ref{eq:weight_change} gives the following;
 
 $$
 \begin{equation}\label{eq:weight_change_delta}
