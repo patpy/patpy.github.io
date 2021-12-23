@@ -61,8 +61,28 @@ bigger the change our learning algorithm should make in that weight. Note that t
 
 ## **Derivation**
 
-To describe the algorithm, let D = {x, d} be the set of example data. As
-shown in Equation (3), *$y_j$* is the output of neuron *j* in the output layer due
+Figure 3 illustrates a neuron, *j*, being fed by a set of input neurons in the
+previous layer (*$i^{th}$*). The induced local field *$φ_j$* associated with neuron *j* is
+described as,
+
+$$\begin{equation}
+  \varphi_j = \sum_{i=0}^m w_{ji}y_i,
+  \label{eq:local_field}
+\end{equation}
+$$
+
+where *m* is the number of neuronal inputs applied to neuron *j*. So *$y_j$* , the
+output of neuron *j* at some iteration n, is defined as;
+
+$$\begin{equation}
+  y_j = f(\varphi_j),
+  \label{eq:output}
+\end{equation}
+$$
+
+where f (·) is the activation function.
+To describe the algorithm, let's suppose that D = {x, d} is a set of example data. As
+shown in Equation \ref{eq:output}, *$y_j$* is the output of neuron *j* in the output layer due
 to some input or simulus *x*. The error between desired value and neuron output
 is exppressed as;
 
@@ -76,24 +96,9 @@ $$
 |:--:|
 | <b> Figure 3: Neural network graph. Demonstration of backpropagation training with a single neural processing unit given a training dataset and computation of the error between desired and neuron output.</b> |
 
-Figure 3 illustrates a neuron, *j*, being fed by a set of input neurons in the
-previous layer (*$i^{th}$*). The induced local field *$φ_j$* associated with neuron *j* is
-described as,
 
-$$\begin{equation}
-  \varphi_j = \sum_{i=0}^m w_{ji}y_i,
-\end{equation}
-$$
 
-where *m* is the number of neuronal inputs applied to neuron *j*. So *$y_j$* , the
-output of neuron *j* at some iteration n, is defined as;
 
-$$\begin{equation}
-  y_j = f(\varphi_j),
-\end{equation}
-$$
-
-where f (·) is the activation function.
 
 The back-propagation updates synaptic weight $w_{ji}$ with weight correction $\Delta w_{ji}$, which is proportional to the following partial derivative:
 $\frac{\partial E}{\partial w_{ji}}$.
