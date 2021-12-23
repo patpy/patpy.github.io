@@ -45,10 +45,9 @@ where *$\textbf{I}_j$* is the set of nodes from the *$i^{th}$* layer which feeds
 
 The back-propagation algorithm is the most popular method by which neural
 networks are trained. The back-propagation can be seen essentially as an implementation of gradient descent.
-
 Training with the back-propagation proceeds in two phases:
-1 *Forward* phase---in this phase the synaptic weights of the network are fixed and the input signal is propagated through the network on  al yer by layer basis until it reaches the output layer.
-2 *Backward* phase---in this phase, the error signal is produced by comparing the output and a known desired resposen
+1. *Forward* phase---in this phase the synaptic weights of the network are fixed and the input signal is propagated through the network on  al yer by layer basis until it reaches the output layer.
+2. *Backward* phase---in this phase, first an error signal is produced by comparing the output of the network and a known desired response. The resulting error signal is then propagated through the network, layer by layer in the backward direction. In this phase adjustments to weights are made to synaptic weights of the neural network.
 
 ... I will begin by specifying the parameters of the neural
 network. Recall, as per discussion in the previous section, that feed-forward neural networks
