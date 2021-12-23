@@ -95,19 +95,7 @@ $$
 
 where f (·) is the activation function.
 
-We need to define a meaure of error for our back–propagation algorithm;
-we consider the error energy each output node. It ensures that positive and
-negative errors do not canel each other out. We modify Equation \ref{eq:err} by
-square the differences before summing them. In addition, we scale the sum
-of errors by 1/2 for convenience:
 
-$$
-\begin{equation}\label{eq:err2}
-  E \coloneqq \frac{1}{2} \sum_{i=1}^m(d_j - y_i)^2 = \frac{1}{2}\sum_{i=1}^me_j^2.
-\end{equation}
-$$
-
-Note that \Cref{eq:err} assumes that the *$j^{th}$* layer is the output  layer.
 
 The change in a weight connecting a node in the previous layer to a node
 in layer *j* is defined by,
@@ -192,6 +180,24 @@ $$
   & = e_j f_j^\prime(\varphi_j)
 \end{align}
 $$
+
+
+
+We need to define a meaure of error for our back–propagation algorithm;
+we consider the error energy each output node. It ensures that positive and
+negative errors do not canel each other out. We modify Equation \ref{eq:err} by
+square the differences before summing them. In addition, we scale the sum
+of errors by 1/2 for convenience:
+
+$$
+\begin{equation}\label{eq:err2}
+  E \coloneqq \frac{1}{2} \sum_{i=1}^m(d_j - y_i)^2 = \frac{1}{2}\sum_{i=1}^me_j^2.
+\end{equation}
+$$
+
+Note that \Cref{eq:err} assumes that the *$j^{th}$* layer is the output  layer.
+
+
 
 The above derivations suggest that the error signal plays a key role in computing the weight correction at the output neuron *j*. Depending on where neuron *j* is located within the network determines how we deal with the correction,
 *$\Delta w_{ji}$*. If neuron *j* is an output node, like other output nodes, it is supplied with the corresponding desired output and this simplifies calculation of the error signal, see \Cref{eq:err_output}, and hence the local gradient.
