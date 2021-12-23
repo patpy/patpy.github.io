@@ -104,8 +104,9 @@ square the differences before summing them. In addition, we scale the sum
 of errors by 1/2 for convenience:
 
 $$
-\begin{equation}\label{eq:err2}
+\begin{equation}
   E := \frac{1}{2} \sum_{i=1}^m(d_{ji} - y_{ji})^2 = \frac{1}{2}\sum_{i=1}^me_j^2,
+  \label{eq:err_sq}
 \end{equation}
 $$
 
@@ -146,7 +147,7 @@ $$
 \end{equation}
 $$
 
-Differentiating both sides of Equation (5) with respect to *$e_j$* we get
+Differentiating both sides of Equation \{eq:err_sq} with respect to *$e_j$* we get
 
 $$
 \begin{equation}\label{eq:err_diff}
@@ -154,15 +155,16 @@ $$
 \end{equation}
 $$
 
-Differentiating \Cref{eq:err_output} with respect to *$y_j$*, we get
+Differentiating \ref{eq:err} with respect to *$y_j$*, we get
 
 $$
-\begin{equation}\label{eq:err_output_diff}
+\begin{equation}
  \frac{\partial e_j}{\partial y_j} = -1.
+ \label{eq:err_diff}
 \end{equation}
 $$
 
-Differentiating \Cref{eq:neuron_out} with respect to *$\varphi_j$* yields
+Differentiating \ref{eq:output} with respect to *$\varphi_j$* yields
 
 $$
 \begin{equation}\label{eq:neuron_out_diff}
