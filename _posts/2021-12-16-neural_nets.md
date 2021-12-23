@@ -223,8 +223,8 @@ $$
 | <b> Figure 4: Training the perceptron. Demonstration of backpropagation training with a single neural processing unit given a training dataset.</b> |
 
 ### Case A: Neuron is an Output Node
-
-### Case A: Neuron is a Hidden Node
+Suppose that neuron *j* is an output node. Then it is suplied with a corresponding desired or target value. In this case, we may rely on Equation \ref{eq:err} to compute the error *$e_j$* associated with the neuron. This makes computing the local gradient $\delta_j$ trivial. 
+### Case B: Neuron is a Hidden Node
 
 |![percep4](/assets/img/perceptron4.png){: .mx-auto.d-block :} |
 |:--:|
