@@ -96,15 +96,9 @@ $$
 where f (·) is the activation function.
 
 The back-propagation updates synaptic weight $w_{ji}$ with weight correction $\Delta w_{ji}$, which is proportional to the following partial derivative:
+$\frac{\partial E}{\partial w_{ji}}$.
 
-$$
-\begin{equation}
-  \frac{\partial E}{\partial w_{ji}}
-  \label{eq:pd}
- \end{equation} 
-  $$.
-
-By the chain rule, we expand the partial derivative in Equation \ref{eq:pd}as follows:
+By the chain rule, we expand the above partial derivative as follows:
 
 $$
 \begin{equation}
