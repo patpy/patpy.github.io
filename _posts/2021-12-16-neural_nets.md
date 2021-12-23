@@ -41,7 +41,7 @@ $$
 
 where *$\textbf{I}_j$* is the set of nodes from the *$i^{th}$* layer which feeds node *j*.
 
-# **The Backpropagation Algorithm: On-line Training of Multilayer Perceptrons**
+# **The Back-propagation Algorithm: On-line Training of Multilayer Perceptrons**
 
 Recall, as per discussion in the previous section, that feed-forward neural networks
 on which the backpropagation learning algorithm is deployed consist of layers
