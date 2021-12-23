@@ -145,7 +145,7 @@ Differentiating \ref{eq:err} with respect to *$y_j$*, we get
 $$
 \begin{equation}
  \frac{\partial e_j}{\partial y_j} = -1.
- \label{eq:err_diff}
+ \label{eq:err_diff2}
 \end{equation}
 $$
 
@@ -167,11 +167,12 @@ $$
 \end{equation}
 $$
 
-Subsitituting \ref{eq:err_diff} to \ref{eq:local_field_diff} in \ref{eq:chain_rule} gives
+Subsitituting \ref{eq:err_diff} with \ref{eq:local_field_diff} in \ref{eq:chain_rule} gives
 
 $$
-\begin{equation}\label{eq:partial_err_weight2}
+\begin{equation}
   \frac{\partial E}{\partial w_{ji}} = -e_j f_j^\prime(\varphi_j)y_j. 
+  \label{eq:partial_err_weight2}
 \end{equation}
 $$
 
