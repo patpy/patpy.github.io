@@ -209,12 +209,14 @@ $$
 where the local gradient *$\delta_j$* is given by
 
 $$
-\begin{align*}
+\begin{equation}
+\begin{aligned}
   \delta_j & = \frac{\partial E}{\partial \varphi_j} \\
   & = \frac{\partial E}{\partial e_j} \frac{\partial e_j}{\partial y_j} \frac{\partial y_j}{\partial \varphi_j} \\
   & = e_j f_j^\prime(\varphi_j).
   \label{eq:local_grad_expand}
-\end{align*}
+\end{aligned}
+\end{equation}
 $$
 
 
