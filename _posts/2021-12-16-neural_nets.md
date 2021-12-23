@@ -81,10 +81,10 @@ $$\begin{equation}
 $$
 
 where f (·) is the activation function.
-To describe the algorithm, let's suppose that D = {x, d} is a set of example data. As
+To describe the back-propagation algorithm, let's suppose that D = {x, d} is a set of example data. As
 shown in Equation \ref{eq:output}, *$y_j$* is the output of neuron *j* in the output layer due
 to some input or simulus *x*. The error between desired value and neuron output
-is exppressed as;
+is expressed as;
 
 $$\begin{equation}
   e_j = d_j - y_j.
@@ -92,12 +92,32 @@ $$\begin{equation}
 \end{equation}
 $$
 
+## Loss Function
+We need to define a meaure of error for our back–propagation algorithm;
+we consider the error energy each output node. It ensures that positive and
+negative errors do not canel each other out. We modify Equation \ref{eq:err} by
+square the differences before summing them. In addition, we scale the sum
+of errors by 1/2 for convenience:
+
+$$
+\begin{equation}\label{eq:err2}
+  E \coloneqq \frac{1}{2} \sum_{i=1}^m(d_j - y_i)^2 = \frac{1}{2}\sum_{i=1}^me_j^2.
+\end{equation}
+$$
+
+Note that \Cref{eq:err} assumes that the *$j^{th}$* layer is the output  layer.
+
+
+
+The above derivations suggest that the error signal plays a key role in computing the weight correction at the output neuron *j*. Depending on where neuron *j* is located within the network determines how we deal with the correction,
+*$\Delta w_{ji}$*. If neuron *j* is an output node, like other output nodes, it is supplied with the corresponding desired output and this simplifies calculation of the error signal, see \Cref{eq:err_output}, and hence the local gradient.
+However if neuron *j* is a hidden node (part of a hidden layer), things get tricky. For instance, there is no specified desired output and we cannot compute the error directly. Instead, the error is computed recursively and working backwards in terms of the errors of
+all the neurons to which the hidden neuron is directly connected.
+
+
 |![percep2](/assets/img/perceptron2.png){: .mx-auto.d-block :} |
 |:--:|
 | <b> Figure 3: Neural network graph. Demonstration of backpropagation training with a single neural processing unit given a training dataset and computation of the error between desired and neuron output.</b> |
-
-
-
 
 
 The back-propagation updates synaptic weight $w_{ji}$ with weight correction $\Delta w_{ji}$, which is proportional to the following partial derivative:
@@ -192,26 +212,7 @@ $$
 
 
 
-We need to define a meaure of error for our back–propagation algorithm;
-we consider the error energy each output node. It ensures that positive and
-negative errors do not canel each other out. We modify Equation \ref{eq:err} by
-square the differences before summing them. In addition, we scale the sum
-of errors by 1/2 for convenience:
-
-$$
-\begin{equation}\label{eq:err2}
-  E \coloneqq \frac{1}{2} \sum_{i=1}^m(d_j - y_i)^2 = \frac{1}{2}\sum_{i=1}^me_j^2.
-\end{equation}
-$$
-
-Note that \Cref{eq:err} assumes that the *$j^{th}$* layer is the output  layer.
-
-
-
-The above derivations suggest that the error signal plays a key role in computing the weight correction at the output neuron *j*. Depending on where neuron *j* is located within the network determines how we deal with the correction,
-*$\Delta w_{ji}$*. If neuron *j* is an output node, like other output nodes, it is supplied with the corresponding desired output and this simplifies calculation of the error signal, see \Cref{eq:err_output}, and hence the local gradient.
-However if neuron *j* is a hidden node (part of a hidden layer), things get tricky. For instance, there is no specified desired output and we cannot compute the error directly. Instead, the error is computed recursively and working backwards in terms of the errors of
-all the neurons to which the hidden neuron is directly connected. Consider the case example shown in \Cref{} the  then things get rather tricky. Inste
+ Consider the case example shown in \Cref{} the  then things get rather tricky. Inste
 
 |![percep3](/assets/img/perceptron3.png){: .mx-auto.d-block :} |
 |:--:|
