@@ -16,12 +16,11 @@ Architecture is an interest to me, and I do 3D modeling and texturing as hobby, 
 
 ![home1](/assets/img/new_look_front.png){: .mx-auto.d-block :}
 
-
 ![home1](/assets/img/new_look_front5.png){: .mx-auto.d-block :}
 
 ![home1](/assets/img/new_look_front8_small.png){: .mx-auto.d-block :}
 
-![home1](/assets/img/new_interior_living1b.png){: .mx-auto.d-block :}
+![home1](/assets/img/new_linterior_living1b.png){: .mx-auto.d-block :}
 
 
 ![guest](/assets/img/Entrance_hotel1.png){: .mx-auto.d-block :}
