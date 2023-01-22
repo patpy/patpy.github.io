@@ -16,7 +16,7 @@ Architecture is an interest to me, and I do 3D modeling and texturing as hobby, 
 
 ![home1](/assets/img/exterior_with_cars10s.png){: .mx-auto.d-block :}
 
-![home1](/assets/img/new_look_front5.png){: .mx-auto.d-block :}
+![home1](/assets/img/exterior_with_cars14.png){: .mx-auto.d-block :}
 
 ![home1](/assets/img/new_look_front8_small.png){: .mx-auto.d-block :}
 
